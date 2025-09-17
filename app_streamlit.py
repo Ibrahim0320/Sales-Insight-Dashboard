@@ -143,6 +143,17 @@ def _auth_gate():
 
 _auth_gate()
 
+# --- secrets helper: works locally (env var) and on Streamlit Cloud (st.secrets)
+def get_secret(name: str, default: str = "") -> str:
+    try:
+        val = os.getenv(name, "")
+        if not val:
+            # st.secrets exists only on Streamlit Cloud (and locally if secrets.toml is present)
+            val = str(st.secrets.get(name, default))
+        return val.strip()
+    except Exception:
+        return default
+
 
 
 
@@ -449,7 +460,8 @@ with st.sidebar:
     # --- Copilot status & diagnostics (GPT-5) ---
 # --- Copilot status & diagnostics (GPT-5 ready) ---
 st.divider()
-_api_key = os.getenv("OPENAI_API_KEY", "").strip()
+_api_key = get_secret("OPENAI_API_KEY")
+
 st.markdown("#### Copilot status  " + ("✅ OpenAI key detected" if _api_key else "⚠️ No API key found"))
 
 with st.expander("LLM diagnostics", expanded=False):
@@ -914,7 +926,8 @@ with tab7:
 
         answer = None
         error_text = None
-        api_key_env = os.getenv("OPENAI_API_KEY", "").strip()
+        api_key_env = get_secret("OPENAI_API_KEY")
+
 
         if (not local_only) and api_key_env:
             try:
