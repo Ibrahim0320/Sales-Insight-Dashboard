@@ -1,8 +1,9 @@
-numpy==1.26.4
-pandas==2.2.2
-matplotlib==3.8.4
 streamlit==1.36.0
+pandas==2.2.2
+numpy==1.26.4
+matplotlib==3.8.4
 seaborn==0.13.2
 plotly==5.22.0
-reportlab==3.6.12
 openai>=1.42.0
+# Optional (PDF export). Comment this line out to speed up the first build:
+# reportlab==3.6.12
