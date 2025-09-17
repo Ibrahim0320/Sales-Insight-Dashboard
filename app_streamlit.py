@@ -693,32 +693,55 @@ with tab3:
     st.markdown('</div>', unsafe_allow_html=True)
 
 # --- Sizes ---
+# --- Sizes ---
 with tab4:
     st.markdown('<div class="block-card">', unsafe_allow_html=True)
     st.subheader("Size Demand (last 8 weeks)")
     note("Which sizes sold most in the last 8 weeks and how much stock you have in each size.")
+
     if size_summary is None:
         st.info("No 'size' data found — upload size-level data (or ensure Products include a Size option).")
     else:
-        st.dataframe(size_summary[["size","units_sold_8w","on_hand","sell_through_pct","weeks_of_cover"]], use_container_width=True)
+        # Table
+        st.dataframe(
+            size_summary[["size","units_sold_8w","on_hand","sell_through_pct","weeks_of_cover"]],
+            use_container_width=True
+        )
+
+        # Chart (Plotly or Seaborn)
+        data = size_summary.sort_values("units_sold_8w", ascending=False)  # <-- fixed here
+
         if PLOTLY_OK and style.startswith("Interactive"):
-            fig = px.bar(size_summary.sort_values("units_sold_8w", descending=True), x="size", y="units_sold_8w", color_discrete_sequence=[ACCENT])
+            fig = px.bar(data, x="size", y="units_sold_8w", color_discrete_sequence=[ACCENT])
+            fig.update_layout(
+                template="simple_white",
+                xaxis_title="Size",
+                yaxis_title="Units sold (8w)",
+                margin=dict(l=20, r=20, t=40, b=20),
+                font=dict(size=14)
+            )
             st.plotly_chart(fig, use_container_width=True, theme=None)
         else:
-            data = size_summary.sort_values("units_sold_8w", ascending=False)
             if SEABORN_OK:
-                fig, ax = plt.subplots(figsize=(8, 4.5)); sns.barplot(data=data, x="size", y="units_sold_8w", ax=ax, color=ACCENT)
+                fig, ax = plt.subplots(figsize=(8, 4.5))
+                sns.barplot(data=data, x="size", y="units_sold_8w", ax=ax, color=ACCENT)
             else:
-                fig, ax = plt.subplots(figsize=(8, 4.5)); ax.bar(data["size"], data["units_sold_8w"], color=ACCENT)
-            ax.set_xlabel("Size"); ax.set_ylabel("Units sold (8w)"); st.pyplot(fig)
+                fig, ax = plt.subplots(figsize=(8, 4.5))
+                ax.bar(data["size"], data["units_sold_8w"], color=ACCENT)
+            ax.set_xlabel("Size")
+            ax.set_ylabel("Units sold (8w)")
+            st.pyplot(fig)
 
+        # Stockouts by SKU/size
         if oos_by_sku is not None and not oos_by_sku.empty:
             st.subheader("OOS by SKU & Size (had demand in last 8w)")
             note("Styles where a size had sales demand but zero stock — likely missed sales.")
             st.dataframe(oos_by_sku, use_container_width=True)
         else:
             st.caption("No size-level stockouts detected or no size-level inventory uploaded.")
+
     st.markdown('</div>', unsafe_allow_html=True)
+
 
 # --- Lifecycle ---
 with tab5:
