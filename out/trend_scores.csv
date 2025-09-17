@@ -1,0 +1,37 @@
+sku,Cherry Red,Cobalt Blue,Sage Green,Mohair,Denim,Poplin,Relaxed,Cropped,Oversized,trend_score,style_name,category,color,material,silhouette
+SKU1000,1,0,0,1,0,0,0,0,0,1.7000000000000002,Noir Skirt,Tops,Cherry Red,Mohair,Tailored
+SKU1001,0,1,0,1,0,0,1,0,0,2.15,Astra Pant,Tops,Cobalt Blue,Mohair,Relaxed
+SKU1002,0,0,0,0,0,0,1,0,0,0.65,Aria Tee,Knitwear,Black,Wool,Relaxed
+SKU1003,1,0,0,0,0,1,1,0,0,2.1,Noir Pant,Dresses,Cherry Red,Poplin,Relaxed
+SKU1004,0,0,0,0,0,0,1,0,0,0.65,Noir Pant,Tops,Black,Wool,Relaxed
+SKU1005,1,0,0,0,0,1,0,0,1,2.0500000000000003,Nero Jacket,Knitwear,Cherry Red,Poplin,Oversized
+SKU1006,1,0,0,1,0,0,0,0,1,2.3000000000000003,Astra Jacket,Outerwear,Cherry Red,Mohair,Oversized
+SKU1007,0,0,1,1,0,0,0,1,0,1.9,Luna Dress,Bottoms,Sage Green,Mohair,Cropped
+SKU1008,0,0,0,0,0,0,0,1,0,0.5,Noir Jacket,Outerwear,Black,Wool,Cropped
+SKU1009,1,0,0,1,0,0,0,0,0,1.7000000000000002,Nero Cardi,Bottoms,Cherry Red,Mohair,Tailored
+SKU1010,0,1,0,0,0,1,0,1,0,1.75,Nero Dress,Dresses,Cobalt Blue,Poplin,Cropped
+SKU1011,0,0,0,0,1,0,0,0,0,0.75,Vela Pant,Knitwear,White,Denim,Tailored
+SKU1012,0,0,0,0,0,1,0,0,0,0.55,Nero Tee,Knitwear,White,Poplin,Tailored
+SKU1013,0,0,1,0,0,0,0,1,0,1.1,Astra Tee,Tops,Sage Green,Wool,Cropped
+SKU1014,0,0,1,0,1,0,1,0,0,2.0,Aria Dress,Knitwear,Sage Green,Denim,Relaxed
+SKU1015,0,1,0,0,0,0,0,0,0,0.7,Aria Cardi,Dresses,Cobalt Blue,Wool,Tailored
+SKU1016,0,0,0,1,0,0,0,0,1,1.4,Aria Tee,Tops,Black,Mohair,Oversized
+SKU1017,0,0,1,0,1,0,0,1,0,1.85,Noir Jacket,Outerwear,Sage Green,Denim,Cropped
+SKU1018,0,1,0,0,0,1,0,0,1,1.85,Noir Tee,Knitwear,Cobalt Blue,Poplin,Oversized
+SKU1019,1,0,0,1,0,0,0,0,1,2.3000000000000003,Nero Dress,Outerwear,Cherry Red,Mohair,Oversized
+SKU1020,1,0,0,0,0,1,0,0,0,1.4500000000000002,Nero Cardi,Outerwear,Cherry Red,Poplin,Tailored
+SKU1021,0,0,0,0,1,0,0,1,0,1.25,Astra Cardi,Knitwear,White,Denim,Cropped
+SKU1022,0,0,1,0,0,0,0,0,0,0.6,Vela Pant,Bottoms,Sage Green,Cotton,Tailored
+SKU1023,0,0,1,0,0,0,0,0,0,0.6,Aria Jacket,Outerwear,Sage Green,Cotton,Tailored
+SKU1024,0,0,1,0,1,0,1,0,0,2.0,Luna Cardi,Tops,Sage Green,Denim,Relaxed
+SKU1025,0,0,0,0,0,1,1,0,0,1.2000000000000002,Noir Tee,Knitwear,Black,Poplin,Relaxed
+SKU1026,1,0,0,0,0,1,0,0,1,2.0500000000000003,Nero Tee,Tops,Cherry Red,Poplin,Oversized
+SKU1027,1,0,0,0,0,0,1,0,0,1.55,Nero Skirt,Outerwear,Cherry Red,Cotton,Relaxed
+SKU1028,0,1,0,0,0,0,0,1,0,1.2,Nero Skirt,Outerwear,Cobalt Blue,Cotton,Cropped
+SKU1029,0,0,1,0,0,0,0,1,0,1.1,Nero Dress,Tops,Sage Green,Cotton,Cropped
+SKU1030,0,0,0,0,0,0,0,0,0,0.0,Nero Pant,Outerwear,Black,Wool,Tailored
+SKU1031,0,0,1,0,0,0,0,0,0,0.6,Aria Skirt,Knitwear,Sage Green,Cotton,Tailored
+SKU1032,0,0,1,0,0,1,1,0,0,1.7999999999999998,Vela Dress,Outerwear,Sage Green,Poplin,Relaxed
+SKU1033,0,0,0,0,1,0,0,0,0,0.75,Vela Dress,Tops,White,Denim,Tailored
+SKU1034,1,0,0,0,0,0,1,0,0,1.55,Aria Cardi,Tops,Cherry Red,Cotton,Relaxed
+SKU1035,0,0,1,0,0,0,0,0,1,1.2,Aria Pant,Knitwear,Sage Green,Wool,Oversized

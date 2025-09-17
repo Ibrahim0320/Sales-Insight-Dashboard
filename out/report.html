@@ -1,0 +1,223 @@
+
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sample Brand — NordicAI Mini-Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 24px; }
+            h1, h2 { margin-bottom: 6px; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 16px; }
+            th, td { border: 1px solid #ddd; padding: 6px; font-size: 12px; }
+            th { background: #f2f2f2; }
+            .charts img { max-width: 100%; height: auto; margin: 8px 0; }
+            .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+            .small { font-size: 12px; color: #555; }
+        </style>
+    </head>
+    <body>
+        <h1>Sample Brand — NordicAI Mini-Report</h1>
+        <p class="small">Date range: 2025-06-16 to 2025-09-07 | Weeks covered: 11.9</p>
+        
+        <h2>Quick Recommendations</h2>
+        <ul>
+            <li>Reorder top sellers (Sell-through &gt; 70% and WOC &lt; 4)</li>
+            <li>Mark down SKUs with WOC ≥ 12 by 25% (ladder built-in)</li>
+            <li>Align content with trends scoring highest in your catalogue</li>
+        </ul>
+        
+        <div class="charts">
+            <img src="charts/top10_revenue.png" alt="Top 10 SKUs by Revenue" />
+            <img src="charts/size_curve_heatmap.png" alt="Size Curve Heatmap" />
+            <img src="charts/woc_hist.png" alt="Weeks of Cover Histogram" />
+            <img src="charts/trend_heatmap.png" alt="Trend Heatmap" />
+        </div>
+        
+        <h2>Reorder Candidates (Top 10)</h2>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sku</th>
+      <th>style_name</th>
+      <th>category</th>
+      <th>sell_through_pct</th>
+      <th>weeks_of_cover</th>
+      <th>trend_score</th>
+      <th>revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SKU1027</td>
+      <td>Nero Skirt</td>
+      <td>Outerwear</td>
+      <td>0.797297</td>
+      <td>3.014528</td>
+      <td>1.55</td>
+      <td>11798.251930</td>
+    </tr>
+    <tr>
+      <td>SKU1030</td>
+      <td>Nero Pant</td>
+      <td>Outerwear</td>
+      <td>0.761905</td>
+      <td>3.705357</td>
+      <td>0.00</td>
+      <td>8199.335610</td>
+    </tr>
+    <tr>
+      <td>SKU1031</td>
+      <td>Aria Skirt</td>
+      <td>Knitwear</td>
+      <td>0.770270</td>
+      <td>3.536341</td>
+      <td>0.60</td>
+      <td>4944.041592</td>
+    </tr>
+    <tr>
+      <td>SKU1009</td>
+      <td>Nero Cardi</td>
+      <td>Bottoms</td>
+      <td>0.777778</td>
+      <td>3.387755</td>
+      <td>1.70</td>
+      <td>3374.845913</td>
+    </tr>
+    <tr>
+      <td>SKU1035</td>
+      <td>Aria Pant</td>
+      <td>Knitwear</td>
+      <td>0.821918</td>
+      <td>2.569048</td>
+      <td>1.20</td>
+      <td>3325.833662</td>
+    </tr>
+  </tbody>
+</table>
+        
+        <h2>Markdown Candidates (Top 10 by WOC)</h2>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sku</th>
+      <th>style_name</th>
+      <th>category</th>
+      <th>sell_through_pct</th>
+      <th>weeks_of_cover</th>
+      <th>suggested_markdown</th>
+      <th>revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SKU1015</td>
+      <td>Aria Cardi</td>
+      <td>Dresses</td>
+      <td>0.440678</td>
+      <td>15.049451</td>
+      <td>0.25</td>
+      <td>4952.142649</td>
+    </tr>
+    <tr>
+      <td>SKU1007</td>
+      <td>Luna Dress</td>
+      <td>Bottoms</td>
+      <td>0.454545</td>
+      <td>14.228571</td>
+      <td>0.25</td>
+      <td>6034.251095</td>
+    </tr>
+    <tr>
+      <td>SKU1014</td>
+      <td>Aria Dress</td>
+      <td>Knitwear</td>
+      <td>0.467532</td>
+      <td>13.503968</td>
+      <td>0.25</td>
+      <td>6352.273398</td>
+    </tr>
+    <tr>
+      <td>SKU1029</td>
+      <td>Nero Dress</td>
+      <td>Tops</td>
+      <td>0.515625</td>
+      <td>11.138528</td>
+      <td>0.15</td>
+      <td>4239.499039</td>
+    </tr>
+    <tr>
+      <td>SKU1013</td>
+      <td>Astra Tee</td>
+      <td>Tops</td>
+      <td>0.561798</td>
+      <td>9.248571</td>
+      <td>0.15</td>
+      <td>9372.821710</td>
+    </tr>
+    <tr>
+      <td>SKU1034</td>
+      <td>Aria Cardi</td>
+      <td>Tops</td>
+      <td>0.564103</td>
+      <td>9.162338</td>
+      <td>0.15</td>
+      <td>9271.499246</td>
+    </tr>
+    <tr>
+      <td>SKU1033</td>
+      <td>Vela Dress</td>
+      <td>Tops</td>
+      <td>0.565789</td>
+      <td>9.099668</td>
+      <td>0.15</td>
+      <td>6367.017850</td>
+    </tr>
+    <tr>
+      <td>SKU1019</td>
+      <td>Nero Dress</td>
+      <td>Outerwear</td>
+      <td>0.574468</td>
+      <td>8.783069</td>
+      <td>0.15</td>
+      <td>7021.567114</td>
+    </tr>
+    <tr>
+      <td>SKU1006</td>
+      <td>Astra Jacket</td>
+      <td>Outerwear</td>
+      <td>0.584906</td>
+      <td>8.414747</td>
+      <td>0.15</td>
+      <td>1842.804306</td>
+    </tr>
+    <tr>
+      <td>SKU1020</td>
+      <td>Nero Cardi</td>
+      <td>Outerwear</td>
+      <td>0.593750</td>
+      <td>8.112782</td>
+      <td>0.15</td>
+      <td>7904.619746</td>
+    </tr>
+  </tbody>
+</table>
+        
+        <h2>Potential Phase-out (Lowest Sell-through)</h2>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sku</th>
+      <th>style_name</th>
+      <th>category</th>
+      <th>sell_through_pct</th>
+      <th>weeks_of_cover</th>
+      <th>revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+        
+        <p class="small">Generated by NordicAI Python Pipeline.</p>
+    </body>
+    </html>
+    
